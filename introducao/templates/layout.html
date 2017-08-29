@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <meta charset="utf-8">
+          <link rel="stylesheet" href="static/bootstrap.min.css">
+     </head>
+     <title>{% block title %}{% endblock %}</title>
+     <header>
+          <nav>
+               <div class="container">
+                    <a href="/">Home</a>
+                    <a href="/sobre">Sobre</a>
+               </div>
+          </nav>
+     </header>
+     <body>
+          <main>
+               <div class="container">
+                    {% block conteudo %}{% endblock %}
+               </div>
+          </main>
+     </body>
+     <footer>
+          <div class="container">
+               RODAPÉ
+          </div>
+     </footer>
+</html>

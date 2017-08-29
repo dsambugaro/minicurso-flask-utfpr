@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}Perfil Github{% endblock %}
+
+{% block conteudo %}
+<div class="row">
+     <img src="{{user.avatar_url}}">
+     <h2>{{ user.name }}</h2>
+     <h4>{{ user.email }}</h4>
+</div>
+<hr />
+<div class="row">
+     <h3>Repositórios</h3>
+     <br />
+     {% for repo in repos %}
+          <p>{{ repo.name }} - {{ repo['language'] }}</p>
+     {% endfor %}
+</div>
+{% endblock %}
